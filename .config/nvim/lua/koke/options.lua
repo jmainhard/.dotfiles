@@ -21,7 +21,7 @@ end
 vim.cmd[[colorscheme tokyonight]]
 
 -- leader
-vim.g.mapleader = ' '
+vim.g.mapleader = ','
 
 -- plugins
 local telescope = require('telescope.builtin')
