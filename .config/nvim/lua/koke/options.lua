@@ -6,6 +6,7 @@ local options = {
     wrap = false,
     scrolloff = 8,
     showmode = false,
+    hlsearch = false,
     smartindent = true,
     tabstop = 4,
     shiftwidth = 4,                          -- the number of spaces inserted for each indentation
