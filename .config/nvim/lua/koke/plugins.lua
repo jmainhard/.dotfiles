@@ -7,30 +7,30 @@ vim.cmd([[
 ]])
 
 return require('packer').startup(function(use)
-	use 'wbthomason/packer.nvim'
-	use 'tpope/vim-sensible'
-	use 'folke/tokyonight.nvim'
-	use {
-		'nvim-treesitter/nvim-treesitter',
-		run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-	}
-	use 'nvim-lua/plenary.nvim'
-	use 'nvim-tree/nvim-web-devicons'
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
-		requires = { {'nvim-lua/plenary.nvim'} },
-	}
-	use {
-		"akinsho/toggleterm.nvim", tag = '*', config = function()
-			require("toggleterm").setup() 
-		end
-	}
-	use {
-		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-	}
-	use {
-		"windwp/nvim-autopairs",
-		config = function() require("nvim-autopairs").setup {} end
-	}
+    use 'wbthomason/packer.nvim'
+    use 'tpope/vim-sensible'
+    use 'folke/tokyonight.nvim'
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    }
+    use 'nvim-lua/plenary.nvim'
+    use 'nvim-tree/nvim-web-devicons'
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        requires = { {'nvim-lua/plenary.nvim'} },
+    }
+    use {
+        "akinsho/toggleterm.nvim", tag = '*', config = function()
+            require("toggleterm").setup() 
+        end
+    }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 end)
