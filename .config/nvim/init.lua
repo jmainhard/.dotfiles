@@ -1,5 +1,5 @@
-require "koke.options"
 require "koke.plugins"
+require "koke.options"
 require "koke.treesitter"
 require "koke.telescope"
 require "koke.toggleterm"
