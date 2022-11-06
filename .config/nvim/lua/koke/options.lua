@@ -1,16 +1,16 @@
 local options = {
     clipboard = "unnamedplus",
-    expandtab = false,
     relativenumber = true,
-    nu = true,
+    number = true,
     wrap = false,
     scrolloff = 8,
     showmode = false,
     hlsearch = false,
     smartindent = true,
     tabstop = 4,
-    shiftwidth = 4,                          -- the number of spaces inserted for each indentation
+    shiftwidth = 4,
     expandtab = true,
+    cursorline = true
 }
 
 for k, v in pairs(options) do
@@ -22,6 +22,9 @@ vim.cmd[[colorscheme tokyonight]]
 
 -- leader
 vim.g.mapleader = ','
+
+-- netrw
+vim.g.netrw_banner = 0
 
 -- plugins
 local telescope = require('telescope.builtin')
