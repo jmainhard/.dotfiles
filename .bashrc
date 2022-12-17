@@ -88,9 +88,7 @@ alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
 
 ################################################################################
 ## koke 
-_open_plan() {
-    setsid  libreoffice /home/koke/ufro/semestre/22-2/calendario.ods
-}
+DOCUMENTS=$(xdg-user-dir DOCUMENTS)
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias grep='grep --color'
@@ -98,19 +96,19 @@ alias vi='nvim'
 alias we='cat ~/clases/weekTasks.txt'
 alias weed='vi ~/clases/weekTasks.txt'
 alias t='todo.sh -t'
-alias plan='_open_plan'
 alias icat='kitty +kitten icat --align=left'
-alias sched='_horario'
-alias who='_whoIsInClasses'
 alias wtr='curl wttr.in/temuco?lang=es'
 alias viconf='vi -c "cd ~/.config/nvim" ~/.config/nvim'
-DOCUMENTS=$(xdg-user-dir DOCUMENTS)
 
-_horario() {
+calendar() {
+    setsid  libreoffice /home/koke/ufro/semestre/22-2/calendario.ods
+}
+
+sched() {
     icat $DOCUMENTS/horarios/22-2.png
 }
 
-_whoIsInClasses() {
+who() {
     icat $DOCUMENTS/horarios/22-2-quienChuchaEstaEnClases-2022-08-30.jpg
 }
 
