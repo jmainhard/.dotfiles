@@ -86,4 +86,6 @@ who() {
     icat $DOCUMENTS/horarios/22-2-quienChuchaEstaEnClases-2022-08-30.jpg
 }
 
+export CHROME_EXECUTABLE=/usr/bin/chromium
+
 eval "$(starship init bash)"
