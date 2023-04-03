@@ -73,13 +73,14 @@ alias t='todo.sh -t -d /home/koke/.config/todo/config'
 alias icat='kitty +kitten icat --align=left'
 alias wtr='curl wttr.in/temuco?lang=es'
 alias viconf='vi -c "cd ~/.config/nvim" ~/.config/nvim'
+alias yupi='vscodium /home/koke/clases/ingDeDatos-icc732'
 
 calendar() {
-    setsid  libreoffice /home/koke/ufro/semestre/22-2/calendario.ods
+    setsid  libreoffice /home/koke/ufro/semestre/23-1/calendario.ods
 }
 
 sched() {
-    icat $DOCUMENTS/horarios/22-2.png
+    icat $DOCUMENTS/horarios/23-1.png
 }
 
 who() {
@@ -87,5 +88,8 @@ who() {
 }
 
 export CHROME_EXECUTABLE=/usr/bin/chromium
+
+# Set up Node Version Manager
+source /usr/share/nvm/init-nvm.sh
 
 eval "$(starship init bash)"
