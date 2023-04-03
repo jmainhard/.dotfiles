@@ -57,6 +57,11 @@
 
     # index
     a = add
+	aa = add --all
+	au = add --update
+	ai = add --interactive
+	ap = add --patch
+	an = add --intent-to-add
 
     # commit
     c = commit

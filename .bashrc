@@ -74,6 +74,7 @@ alias icat='kitty +kitten icat --align=left'
 alias wtr='curl wttr.in/temuco?lang=es'
 alias viconf='vi -c "cd ~/.config/nvim" ~/.config/nvim'
 alias yupi='vscodium /home/koke/clases/ingDeDatos-icc732'
+alias pc='python -ic "from math import *"'
 
 calendar() {
     setsid  libreoffice /home/koke/ufro/semestre/23-1/calendario.ods
