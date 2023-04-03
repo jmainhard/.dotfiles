@@ -60,7 +60,6 @@
 
     # commit
     c = commit
-    cm = commit -m
     ca = commit --amend
     up = remote update --prune
 
@@ -82,6 +81,10 @@
 	cl = clone
 	p = pull
     f = fetch --tags
+
+	# open GitHub repository in browser
+	#    git open [<remote>]
+	open = "!f() { URL=$(git config remote.${1:-origin}.url); xdg-open \"${URL%%.git}\"; }; f"
 
     # src: https://github.com/grdryn/gitconfig/blob/master/.gitconfig
 	d = diff --color-words
