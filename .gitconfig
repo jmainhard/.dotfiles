@@ -93,6 +93,7 @@
 
     # src: https://github.com/grdryn/gitconfig/blob/master/.gitconfig
 	d = diff --color-words
+    dc = diff --color-words --cached
 	who = shortlog -s --
 	scrub = !git reset --hard && git clean -fd    
     rv = remote -v
