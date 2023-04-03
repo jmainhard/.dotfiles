@@ -25,7 +25,7 @@
 font pango: Noto Sans Regular 10, FontAwesome 10
 
 # set the mod key to the winkey:
-set $mod Mod4
+set $mod Mod4 
 
 #####################
 # workspace layout: #
@@ -266,13 +266,12 @@ bindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill 
 bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
 
 # audio control
-bindsym $mod+Home exec playerctl play
-bindsym Pause exec playerctl pause
+bindsym $mod+p exec playerctl play-pause
 bindsym $mod+Next exec playerctl next
 bindsym $mod+Prior exec playerctl previous
 
 # Redirect sound to headphones
-bindsym $mod+p exec /usr/local/bin/switch-audio-port
+#bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
 bindsym $mod+w exec /usr/bin/firefox
@@ -381,7 +380,7 @@ exec --no-startup-id dex --autostart --environment i3
 #exec --no-startup-id numlockx on
 
 # configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
-exec --no-startup-id setxkbmap -layout 'us,latam' -variant intl, -option 'grp:win_space_toggle'
+exec --no-startup-id setxkbmap -layout 'latam,us' -variant ,intl -option 'grp:win_space_toggle'
 
 # start conky:
 #exec_always --no-startup-id conky
@@ -424,6 +423,8 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 #exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 exec --no-startup-id sleep 2 && kitty
 exec --no-startup-id sleep 3 && redshift 
+exec --no-startup-id sleep 4 && dbus-update-activation-environment --all
+exec --no-startup-id sleep 5 && gnome-keyring-daemon --start --components=secrets
 
 ###############
 # system tray #
