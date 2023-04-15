@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'tpope/vim-sensible'
     use 'folke/tokyonight.nvim'
+    use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,

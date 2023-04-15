@@ -85,7 +85,7 @@ sched() {
 }
 
 who() {
-    icat $DOCUMENTS/horarios/22-2-quienChuchaEstaEnClases-2022-08-30.jpg
+    icat $DOCUMENTS/horarios/QCC-23-1.png
 }
 
 export CHROME_EXECUTABLE=/usr/bin/chromium
