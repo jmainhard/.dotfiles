@@ -79,7 +79,7 @@ bindsym $mod+6    workspace  $ws6
 bindsym $mod+7    workspace  $ws7
 bindsym $mod+8    workspace  $ws8
 bindsym $mod+9    workspace  $ws9
-bindsym $mod+0    workspace  $ws10
+#bindsym $mod+0    workspace  $ws10
 
 # switch to workspace with numpad keys
 bindcode $mod+87 workspace 1
@@ -298,6 +298,16 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+#set $ws1 " " 
+#set $ws2 " "
+#set $ws3 " "
+#set $ws4 " "
+#set $ws5 " "
+#set $ws6 " "
+#set $ws7 " "
+#set $ws8 " "
+#set $ws9 " "
+#set $ws10 " "
 
 # use workspaces on different displays:
 # where you have to replace VGA-0/HDMI-0 with the names for your displays
@@ -391,17 +401,22 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /home/koke/multimedia/images/wallpapers/wallhaven-m391p8_1920x1080.png
+exec --no-startup-id sleep 1 && feh --bg-fill /home/koke/multimedia/images/wallpapers/twitter-starship-4096x2304.jpg
 
+# lock on systemd events or dpms
+exec_always --no-startup-id xss-lock -- ~/.config/i3/scripts/blur-lock
 # set powersavings for display:
-exec --no-startup-id xset s 480 dpms 600 600 600
+# 1200: suspend (s)
+#  600: display off (s) 
+exec_always --no-startup-id xset dpms 0 1200 600 
 
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms
 
 # use xautolock to use autosuspend rules for mobile devices
 # https://wiki.archlinux.org/title/Session_lock#xautolock
-#exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
+#exec_always --no-startup-id xautolock -time 12 -locker "~/.config/i3/scripts/blur-lock; xset dpms force off" -corners 0+00
+
 
 
 # xscreensaver
@@ -503,7 +518,7 @@ bar {
         font pango: FontAwesome 10
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
         position bottom
-#           i3bar_command i3bar --transparency
+        i3bar_command i3bar 
 # it could be that you have no primary display set: set one (xrandr --output <output> --primary)
 # reference: https://i3wm.org/docs/userguide.html#_tray_output
         #tray_output primary
@@ -512,8 +527,8 @@ bar {
 # When strip_workspace_numbers is set to yes,
 # any workspace that has a name of the form
 # “[n][:][NAME]” will display only the name.
-##strip_workspace_numbers yes
-        strip_workspace_name no
+        #strip_workspace_numbers yes
+        strip_workspace_name yes
         colors {
             separator          $purple
             background         $darkgrey
@@ -523,6 +538,11 @@ bar {
             active_workspace    $lightblue          $mediumgrey $darkgrey   $purple
             inactive_workspace  $darkgrey           $darkgrey   $grey       $purple
             urgent_workspace    $urgentred          $urgentred  $white      $purple
+#            ---
+#            focused_workspace   $darkgrey           $darkgrey           $darkgrey       $darkgrey
+#            active_workspace    $darkgrey           $darkgrey           $darkgrey       $darkgrey
+#            inactive_workspace  $darkgrey           $darkgrey           $darkgrey       $darkgrey
+#            urgent_workspace    $darkgrey           $darkgrey           $darkgrey       $darkgrey        
         }
 }
 
