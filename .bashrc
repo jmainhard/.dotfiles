@@ -75,6 +75,7 @@ alias wtr='curl wttr.in/temuco?lang=es'
 alias viconf='vi -c "cd ~/.config/nvim" ~/.config/nvim'
 alias yupi='vscodium /home/koke/clases/ingDeDatos-icc732'
 alias pc='python -ic "from math import *"'
+alias ip='ip --color'
 
 calendar() {
     setsid  libreoffice /home/koke/ufro/semestre/23-1/calendario.ods
@@ -94,3 +95,7 @@ export CHROME_EXECUTABLE=/usr/bin/chromium
 source /usr/share/nvm/init-nvm.sh
 
 eval "$(starship init bash)"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
