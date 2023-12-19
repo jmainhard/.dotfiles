@@ -401,7 +401,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /home/koke/multimedia/images/wallpapers/twitter-starship-4096x2304.jpg
+exec --no-startup-id sleep 1 && feh --bg-fill /home/koke/multimedia/images/wallpapers/wallhaven-gpwgx3_1920x1080.png
 
 # lock on systemd events or dpms
 exec_always --no-startup-id xss-lock -- ~/.config/i3/scripts/blur-lock
