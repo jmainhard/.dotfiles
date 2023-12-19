@@ -63,17 +63,17 @@ alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
 ################################################################################
 ## koke 
 DOCUMENTS=$(xdg-user-dir DOCUMENTS)
+WEEK_TASKS_PATH=~/documents/text/todo/weekTasks.txt
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias grep='grep --color'
 alias vi='nvim'
-alias we='cat ~/clases/weekTasks.txt'
-alias weed='vi ~/clases/weekTasks.txt'
+alias we='cat $WEEK_TASKS_PATH' 
+alias weed='vi $WEEK_TASKS_PATH'
 alias t='todo.sh -t -d /home/koke/.config/todo/config'
 alias icat='kitty +kitten icat --align=left'
 alias wtr='curl wttr.in/temuco?lang=es'
 alias viconf='vi -c "cd ~/.config/nvim" ~/.config/nvim'
-alias yupi='vscodium /home/koke/clases/ingDeDatos-icc732'
 alias pc='python -ic "from math import *"'
 alias ip='ip --color'
 
@@ -82,11 +82,11 @@ calendar() {
 }
 
 sched() {
-    icat $DOCUMENTS/horarios/23-1.png
+    icat $DOCUMENTS/horarios/23-2-v5.png
 }
 
 who() {
-    icat $DOCUMENTS/horarios/QCC-23-1.png
+    icat $DOCUMENTS/horarios/QCC-23-2.png
 }
 
 export CHROME_EXECUTABLE=/usr/bin/chromium
@@ -97,5 +97,3 @@ source /usr/share/nvm/init-nvm.sh
 eval "$(starship init bash)"
 
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
