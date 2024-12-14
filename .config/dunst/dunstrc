@@ -27,13 +27,13 @@
     width = 300
 
     # The maximum height of a single notification, excluding the frame.
-    height = 300
+    height = (0, 300)
 
     # Position the notification in the top right corner
     origin = bottom-right
 
     # Offset from the origin
-    offset = 30x40
+    offset = (30, 40)
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -296,14 +296,13 @@
     foreground = "#ffffff"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
-    icon = /usr/share/icons/Arc-X-D/status/16/dialog-information.png
+    icon = /usr/share/icons/Qogir-dark/32/status/dialog-information.svg
 
 [urgency_normal]
     background = "#28143c"
     foreground = "#ffffff"
     timeout = 5
-    # Icon for notifications with normal urgency, uncomment to enable
-    icon = /usr/share/icons/Arc-X-D/status/16/dialog-question.png
+    icon = /home/koke/multimedia/icons/dinkdonk32.png
 
 [urgency_critical]
     background = "#28143c"
@@ -311,7 +310,7 @@
     frame_color = "#ff7f7f"
     timeout = 120
     # Icon for notifications with critical urgency, uncomment to enable
-    icon = /usr/share/icons/Arc-X-D/status/16/dialog-warning.png
+    icon = /usr/share/icons/Qogir-dark/32/status/dialog-warning.svg
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
