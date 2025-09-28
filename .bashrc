@@ -77,23 +77,16 @@ alias viconf='vi -c "cd ~/.config/nvim" ~/.config/nvim'
 alias pc='python -ic "from math import *"'
 alias ip='ip --color'
 
-calendar() {
-    setsid  libreoffice /home/koke/ufro/semestre/23-1/calendario.ods
-}
-
-sched() {
-    icat $DOCUMENTS/horarios/23-2-v5.png
-}
-
-who() {
-    icat $DOCUMENTS/horarios/QCC-23-2.png
-}
-
 export CHROME_EXECUTABLE=/usr/bin/chromium
 
 # Set up Node Version Manager
 source /usr/share/nvm/init-nvm.sh
 
 eval "$(starship init bash)"
+eval "$(fzf --bash)"
 
-
+. "/home/koke/.deno/env"
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
+source /home/koke/.local/share/bash-completion/completions/deno.bash
