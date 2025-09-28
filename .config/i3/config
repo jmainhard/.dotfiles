@@ -274,6 +274,10 @@ bindsym $mod+p exec --no-startup-id playerctl play-pause
 bindsym $mod+Next exec --no-startup-id playerctl next
 bindsym $mod+Prior exec --no-startup-id playerctl previous
 
+# bluetooth speaker controls
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+
 # Redirect sound to headphones
 # bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 
@@ -281,10 +285,15 @@ bindsym $mod+Prior exec --no-startup-id playerctl previous
 bindsym $mod+w exec /usr/bin/firefox
 bindsym $mod+n exec /usr/bin/thunar
 bindsym $mod+m exec /usr/bin/thunderbird
+bindsym $mod+y exec /usr/bin/youtube-music
 bindsym Print exec flameshot gui
 
 # Power Profiles menu switcher (rofi)
 bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
+
+# Screen layout switch
+bindsym $mod+F11 exec ~/.config/i3/scripts/single-monitor
+bindsym $mod+F12 exec ~/.config/i3/scripts/single
 
 ##########################################
 # configuration for workspace behaviour: #
@@ -329,6 +338,7 @@ assign [class="Thunar"] $ws3
 assign [class="(i?)thunderbird"] $ws4
 assign [class="(?i)discord"] $ws5
 assign [class="Signal"] $ws5
+assign [class="com.github.th_ch.youtube_music"] $ws9
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=kitty] focus
@@ -389,7 +399,7 @@ exec --no-startup-id dex --autostart --environment i3
 # num lock activated
 #exec --no-startup-id numlockx on
 
-# configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
+# configure multiple keyboard layouts and hotkey to switch
 exec --no-startup-id setxkbmap -layout 'latam,us' -variant ,intl -option 'grp:win_space_toggle'
 
 # start conky:
@@ -401,7 +411,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /home/koke/multimedia/images/wallpapers/wallhaven-gpwgx3_1920x1080.png
+exec --no-startup-id sleep 1 && feh --bg-fill /home/koke/multimedia/images/wallpapers/wallhaven-1pz653_1920x1080.png
 
 # lock on systemd events or dpms
 exec_always --no-startup-id xss-lock -- ~/.config/i3/scripts/blur-lock
